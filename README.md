@@ -23,34 +23,14 @@ Built with "Smart Logic" to maximize revenue while protecting user experience.
 
 ## ✨ Features
 
-<table>
-<tr>
-<td width="50%">
-
-**🎯 Smart 8–15 Click Logic**  
-Displays ads randomly between the 8th and 15th user click. Prevents ad fatigue and protects your AdMob account from policy violations.
-
-**🔁 Every 3 Clicks Logic**  
-Fixed-interval ad strategy designed for high-engagement apps where consistent monetization is the priority.
-
-**⚡ One-Click Force Show**  
-Instantly display an interstitial for critical moments — no counters, no delays.
-
-</td>
-<td width="50%">
-
-**🎁 Rewarded Ads with Fallback**  
-Guarantees reward delivery to users even when an ad fails to load, keeping trust and retention high.
-
-**📱 App Open Ad Support**  
-High-impact full-screen ads shown on app launch or resume. Initialized at the Application level for zero latency.
-
-**🏷️ Dynamic Banner Loading**  
-Inject adaptive banners into any `ViewGroup` container with a single method call.
-
-</td>
-</tr>
-</table>
+| | Feature | Description |
+|---|---|---|
+| 🎯 | **Smart 8–15 Click Logic** | Shows ads randomly between the 8th and 15th click — prevents ad fatigue and protects your AdMob account. |
+| 🔁 | **Every 3 Clicks Logic** | Fixed-interval strategy for high-engagement apps that need consistent monetization. |
+| ⚡ | **One-Click Force Show** | Instantly display an interstitial for critical moments — no counters, no delays. |
+| 🎁 | **Rewarded Ads with Fallback** | Guarantees reward delivery even when an ad fails to load, keeping user trust high. |
+| 📱 | **App Open Ad Support** | Full-screen ads on launch/resume, initialized at Application level for zero latency. |
+| 🏷️ | **Dynamic Banner Loading** | Inject adaptive banners into any `ViewGroup` container with a single method call. |
 
 ---
 
@@ -197,10 +177,7 @@ Show a rewarded ad and grant the reward via callback. The fallback mechanism ens
 <summary><b>Kotlin</b></summary>
 
 ```kotlin
-AdsManager.getInstance().showRewardedWithWatchCheck(
-    this,
-    AdsManager.TEST_REWARDED
-) { amount ->
+AdsManager.getInstance().showRewardedWithWatchCheck(this,AdsManager.TEST_REWARDED) { amount ->
     // Grant the reward to the user
     Toast.makeText(this, "You earned $amount coins!", Toast.LENGTH_SHORT).show()
 }
