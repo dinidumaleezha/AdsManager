@@ -74,7 +74,7 @@ Add your AdMob App ID inside the `<application>` tag in `AndroidManifest.xml`:
 
 To ensure ads are pre-loaded, initialize the SDK in your `Application` class.
 
-#### `Kotlin DSL`
+#### ` Kotlin DSL `
 ```kotlin
 class MyApp : Application() {
     override fun onCreate() {
@@ -89,7 +89,7 @@ class MyApp : Application() {
 }
 ```
 
-#### `Groovy DSL`
+#### ` Groovy DSL `
 ```Java
 class MyApp : Application() {
     override fun onCreate() {
@@ -114,7 +114,9 @@ Don't forget to register it in `AndroidManifest.xml`:
 
 ---
 
-### 2. Interstitial Ads — 3 Logic Options `(Kotlin DSL)`
+### 2. Interstitial Ads
+
+#### Logic Options ` (Kotlin DSL) `
 
 ```kotlin
 val ads = AdsManager.getInstance()
@@ -134,7 +136,10 @@ btnDownload.setOnClickListener {
     ads.showInterstitialOneClick(this, AdsManager.TEST_INTERSTITIAL)
 }
 ```
-### Interstitial Ads — 3 Logic Options `(Groovy DSL)`
+### Interstitial Ads
+
+#### Logic Options ` (Groovy DSL) `
+
 ```kotlin
 val ads = AdsManager.getInstance()
 
