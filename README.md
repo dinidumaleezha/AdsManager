@@ -1,6 +1,6 @@
-# 🚀 BoomAdsManager SDK
+# 🚀 AdsManager SDK
 
-A powerful, lightweight Android Library (AAR) designed for seamless Google AdMob integration. **BoomAdsManager** features "Smart Logic" to balance revenue and user experience by preventing ad fatigue.
+A powerful, lightweight Android Library (AAR) designed for seamless Google AdMob integration. **AdsManager** features "Smart Logic" to balance revenue and user experience by preventing ad fatigue.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-purple)
 ![Min SDK](https://img.shields.io/badge/minSdk-21%2B-green)
@@ -26,20 +26,28 @@ A powerful, lightweight Android Library (AAR) designed for seamless Google AdMob
 
 ### Step 1: Add the AAR File
 
-Copy `AdsManager-release.aar` into your project's `app/libs/` directory.
+Copy `AdsManager.aar` into your project's `app/libs/` directory.
 
 ```
 app/
 └── libs/
-    └── AdsManager-release.aar  ✅
+    └── AdsManager.aar  ✅
 ```
 
 ### Step 2: Configure `build.gradle.kts` (App level)
 
 ```kotlin
 dependencies {
-    implementation(files("libs/AdsManager-release.aar"))
+    implementation(files("libs/AdsManager.aar"))
     implementation("com.google.android.gms:play-services-ads:23.0.0")
+    implementation("androidx.lifecycle:lifecycle-process:2.8.0")
+}
+```
+```kotlin
+dependencies {
+    implementation(files("libs/AdsManager.aar"))
+    implementation"com.google.android.gms:play-services-ads:23.0.0"
+    implementation"androidx.lifecycle:lifecycle-process:2.8.0"
 }
 ```
 
