@@ -34,7 +34,9 @@ app/
     └── AdsManager.aar  ✅
 ```
 
-### Step 2: Configure `build.gradle.kts` (App level)
+### Step 2: Add dependency
+
+## Configure Kotlin DSL `build.gradle.kts` (App level)
 
 ```kotlin
 dependencies {
@@ -43,10 +45,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-process:2.8.0")
 }
 ```
-### Configure build.gradle (App level)
-```kotlin
+## Configure Groovy DSL `build.gradle` (App level)
+```Java
 dependencies {
-    implementation(files("libs/AdsManager.aar"))
+    implementation files("libs/AdsManager.aar")
     implementation"com.google.android.gms:play-services-ads:23.0.0"
     implementation"androidx.lifecycle:lifecycle-process:2.8.0"
 }
@@ -72,7 +74,23 @@ Add your AdMob App ID inside the `<application>` tag in `AndroidManifest.xml`:
 
 To ensure ads are pre-loaded, initialize the SDK in your `Application` class.
 
+### kotlin
 ```kotlin
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+
+        // Initialize AdMob
+        MobileAds.initialize(this)
+
+        // Preload App Open Ad
+        AdsManager.getInstance().loadAppOpenAd(this, AdsManager.TEST_APP_OPEN)
+    }
+}
+```
+
+### Java
+```Java
 class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
