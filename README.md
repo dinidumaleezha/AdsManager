@@ -43,6 +43,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-process:2.8.0")
 }
 ```
+### Configure build.gradle (App level)
 ```kotlin
 dependencies {
     implementation(files("libs/AdsManager.aar"))
