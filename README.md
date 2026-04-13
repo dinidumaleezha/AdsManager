@@ -36,7 +36,7 @@ app/
 
 ### Step 2: Add dependency
 
-## Configure Kotlin DSL `build.gradle.kts` (App level)
+#### Configure Kotlin DSL `build.gradle.kts` (App level)
 
 ```kotlin
 dependencies {
@@ -45,7 +45,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-process:2.8.0")
 }
 ```
-## Configure Groovy DSL `build.gradle` (App level)
+#### Configure Groovy DSL `build.gradle` (App level)
 ```Java
 dependencies {
     implementation files("libs/AdsManager.aar")
@@ -74,7 +74,7 @@ Add your AdMob App ID inside the `<application>` tag in `AndroidManifest.xml`:
 
 To ensure ads are pre-loaded, initialize the SDK in your `Application` class.
 
-### kotlin
+#### `Kotlin DSL`
 ```kotlin
 class MyApp : Application() {
     override fun onCreate() {
@@ -89,7 +89,7 @@ class MyApp : Application() {
 }
 ```
 
-### Java
+#### `Groovy DSL`
 ```Java
 class MyApp : Application() {
     override fun onCreate() {
