@@ -114,8 +114,27 @@ Don't forget to register it in `AndroidManifest.xml`:
 
 ---
 
-### 2. Interstitial Ads — 3 Logic Options
+### 2. Interstitial Ads — 3 Logic Options `(Kotlin DSL)`
 
+```kotlin
+val ads = AdsManager.getInstance()
+
+// Logic A: Smart Random (8–15 Clicks) — Recommended
+btnNext.setOnClickListener {
+    ads.showInterstitialWithSmartCount(this, AdsManager.TEST_INTERSTITIAL)
+}
+
+// Logic B: Fixed Interval (Every 3 Clicks)
+btnView.setOnClickListener {
+    ads.showInterstitialEvery3Clicks(this, AdsManager.TEST_INTERSTITIAL)
+}
+
+// Logic C: Instant Show (One Click)
+btnDownload.setOnClickListener {
+    ads.showInterstitialOneClick(this, AdsManager.TEST_INTERSTITIAL)
+}
+```
+### Interstitial Ads — 3 Logic Options `(Groovy DSL)`
 ```kotlin
 val ads = AdsManager.getInstance()
 
